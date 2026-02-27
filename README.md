@@ -1,16 +1,26 @@
-## Hi there 👋
+### Bonjour, I'm Faz! 👋
 
-<!--
-**shahfazal/shahfazal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Software Engineer | French Dev in NYC 🗽🇫🇷**
 
-Here are some ideas to get you started:
+I build at the intersection of deep learning and open infrastructure. I am currently in **permanent learning mode** and leaning in **HARD**. Whether it’s deconstructing backpropagation or hardening national data infrastructure, I believe the best way to learn is to build, break, and contribute.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+#### Currently "Learning in Public"
+* **Mastering Neural Nets**: Building **TinyNet** from scratch to deeply understand the "why" behind LSTMs and backpropagation.
+* **Agentic Workflows**: Learning the **MCP (Model Context Protocol)** by actively contributing to the official French infrastructure.
+* **Civic Tech**: Bridging my NYC experience with French public data to move tools from "cool demos" to production-ready.
+
+#### Active Missions
+* **[datagouv-mcp](https://github.com/datagouv/datagouv-mcp)**: Improving DX and autonomy for the official French MCP server.
+  * **PR #20**: Surfacing column metadata and adding smart sorting.
+  * **Issue #22**: Proposing a Python-based developer helper to fix the "3-curl handshake" friction.
+* **NYC EV Demand Prediction**: Applying LSTM models to predict infrastructure needs across the five boroughs.
+
+---
+
+#### Status
+I’ll be traveling through **India** from **Feb 27 to March 15**. I’m looking forward to meeting local micro-brandh watchmakers and hopefully adding a couple to my collection!
+
+---
+📫 **Connect with me:** [LinkedIn](https://www.linkedin.com/in/shahfazalmohammed)
