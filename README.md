@@ -20,6 +20,6 @@ I build at the intersection of deep learning and open infrastructure. I am curre
 ---
 
 #### Status
-Back stateside, working through the Élections Municipales 2026 Open Data challenge. Next up Eval Harnesses.
+* Back stateside, working through the Élections Municipales 2026 Open Data challenge. Next up Eval Harnesses.
 ---
 📫 **Connect with me:** [LinkedIn](https://www.linkedin.com/in/shahfazalmohammed)
