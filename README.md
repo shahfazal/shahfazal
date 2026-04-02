@@ -20,7 +20,6 @@ I build at the intersection of deep learning and open infrastructure. I am curre
 ---
 
 #### Status
-I’ll be traveling through **India** from **Feb 27 to March 15**. I’m looking forward to meeting local micro-brandh watchmakers and hopefully adding a couple to my collection!
-
+Back stateside, working through the Élections Municipales 2026 Open Data challenge. Next up Eval Harnesses.
 ---
 📫 **Connect with me:** [LinkedIn](https://www.linkedin.com/in/shahfazalmohammed)
