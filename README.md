@@ -2,24 +2,82 @@
 
 **Software Engineer | French Dev in NYC 🗽🇫🇷**
 
-I build at the intersection of deep learning and open infrastructure. I am currently in **permanent learning mode** and leaning in **HARD**. Whether it’s deconstructing backpropagation or hardening national data infrastructure, I believe the best way to learn is to build, break, and contribute.
+Lead SWE @ Salesforce. 20 years deterministic systems, now building and learning in public. Agent Evals, AI tooling and much more.
+
+**Find me:** [shahfazal.com](https://shahfazal.com) | [LinkedIn](https://linkedin.com/in/shahfazalmohammed)
 
 ---
 
-#### Currently "Learning in Public"
-* **Mastering Neural Nets**: Building **TinyNet** from scratch to deeply understand the "why" behind LSTMs and backpropagation.
-* **Agentic Workflows**: Learning the **MCP (Model Context Protocol)** by actively contributing to the official French infrastructure.
-* **Civic Tech**: Bridging my NYC experience with French public data to move tools from "cool demos" to production-ready.
+## Active Projects
 
-#### Active Missions
-* **[datagouv-mcp](https://github.com/datagouv/datagouv-mcp)**: Improving DX and autonomy for the official French MCP server.
-  * **PR #20**: Surfacing column metadata and adding smart sorting.
-  * **Issue #22**: Proposing a Python-based developer helper to fix the "3-curl handshake" friction.
-* **NYC EV Demand Prediction**: Applying LSTM models to predict infrastructure needs across the five boroughs.
+### [Claudio](https://github.com/shahfazal/claudio) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+
+Session browser for Claude Code. Three shipped versions:
+
+- **v0.1:** Local session explorer (parses `~/.claude/` directory)
+- **v0.2:** Memory browser (reads project memory states)
+
+- **v0.3:** Compaction viewer (analyzes context window compression)
+  **Tech stack:** Python, Rich TUI, file parsing, session state reconstruction
+
+**Use case:** Debug Claude Code workflows, review memory evolution, analyze token usage across compactions.
 
 ---
 
-#### Status
-* Back stateside, working through the Élections Municipales 2026 Open Data challenge. Next up Eval Harnesses.
+### [elections-municipales-2026](https://github.com/shahfazal/elections-municipales-2026) ![MIT](https://img.shields.io/badge/license-MIT-blue)
+
+French municipal elections data viz. Live at [shahfazal.com/elections-municipales-2026](https://shahfazal.com/elections-municipales-2026/)
+
+**Data sources:** DVF (property prices), Results from the 2nd tour of French municipal elections
+**Stack:** Jupyter notebooks for data processing from raw to processed, Plotly, Vanilla JS, D3.
+
+**Shipped:**
+
+**Key lesson:** Declarative specs upfront beat imperative iteration. Full build log coming in blog series.
+
 ---
-📫 **Connect with me:** [LinkedIn](https://www.linkedin.com/in/shahfazalmohammed)
+
+## Recent Contributions
+
+### [datagouv/datagouv-mcp#100](https://github.com/datagouv/datagouv-mcp/pull/100)
+
+PR in review for reducing dev friction when testing the official French data.gouv.fr MCP server. Reduced setup from 3-curl handshake to single command.
+
+**Impact:** Lowers barrier for contributors testing MCP integrations locally.
+
+---
+
+## Writing
+
+Posts (and ramblings) at **[shahfazal.com/posts](https://shahfazal.com/posts)**:
+
+- **"Nobody Tests the Steering Wheel"** - Why agent evals need observe-first methodology
+- **"Claude Gatekeep You Yet?"** - why it's important to stop and think before handing the reins to your coding agent.
+- **Declarative Viz series (upcoming)** - Build log from elections-municipales-2026
+
+---
+
+## What I'm Working On
+
+**Next up:** Public agent eval demo using `datagouv-mcp` as the skill under test. Goal: show how to treat LLM skills like code (version, test, regression-detect).
+
+**Backlog:**
+
+- AI workflow optimizer (analyzes Claudio session exports for inefficiency patterns)
+- Supply chain security scanner for AI-suggested dependencies
+- Plotly a11y toolkit
+
+---
+
+## ML Foundations
+
+Before building production eval systems, rebuilt intuition from first principles:
+
+- **[TinyNet](https://github.com/shahfazal/tinynet)** - Neural net from scratch (Python, no frameworks)
+- **[NYC EV LSTM](https://github.com/shahfazal/nyc-ev-lstm)** - Spatio-temporal demand forecasting
+
+These aren't production systems - they're foundational exercises to understand backprop, overfitting, and temporal modeling before applying those concepts to agent evaluation.
+
+---
+
+**Philosophy:** If it can't be measured, it can't be trusted. I apply 20 years of production engineering rigor (observability, regression detection, test harness design) to the chaos of agentic systems.
