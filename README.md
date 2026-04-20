@@ -2,7 +2,7 @@
 
 **Software Engineer | French Dev in NYC 🗽🇫🇷**
 
-Lead SWE @ Salesforce. 20 years deterministic systems, now building and learning in public. Agent Evals, AI tooling and much more.
+Lead SWE @ Salesforce. 20+ years deterministic systems, now building and learning in public. Agent Evals, AI tooling and much more.
 
 **Find me:** [shahfazal.com](https://shahfazal.com) | [LinkedIn](https://linkedin.com/in/shahfazalmohammed)
 
@@ -12,26 +12,38 @@ Lead SWE @ Salesforce. 20 years deterministic systems, now building and learning
 
 ### [Claudio](https://github.com/shahfazal/claudio) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
-Session browser for Claude Code. Three shipped versions:
+Session browser for Claude Code. Five shipped versions:
 
 - **v0.1:** Local session explorer (parses `~/.claude/` directory)
 - **v0.2:** Memory browser (reads project memory states)
-
 - **v0.3:** Compaction viewer (analyzes context window compression)
-  **Tech stack:** Python, Rich TUI, file parsing, session state reconstruction
+- **v0.4:** Resilience — environment health checks, session export endpoint, externalized pricing config
+- **v0.5:** Stats dashboard — D3 heatmap, per-project cost bars, cumulative cost line, date-range filter, graceful degradation on parse failures
 
-**Use case:** Debug Claude Code workflows, review memory evolution, analyze token usage across compactions.
+**Upcoming:** Driver.js guided help tour across the nav surfaces
+**Tech stack:** Python, Flask, Jinja2, D3.js, pytest
+
+**Use case:** Browse session history, review memory evolution, analyze cost and token usage across projects.
 
 ---
 
 ### [elections-municipales-2026](https://github.com/shahfazal/elections-municipales-2026) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
-French municipal elections data viz. Live at [shahfazal.com/elections-municipales-2026](https://shahfazal.com/elections-municipales-2026/)
+French municipal elections 2026 data viz.
 
-**Data sources:** DVF (property prices), Results from the 2nd tour of French municipal elections
-**Stack:** Jupyter notebooks for data processing from raw to processed, Plotly, Vanilla JS, D3.
+- Live at [shahfazal.com/elections-municipales-2026](https://shahfazal.com/elections-municipales-2026/).
+- [Submission](https://www.data.gouv.fr/reuses/prix-immobilier-et-resultats-electoraux-elections-municipales-2026) on data.gouv.fr.
+
+**Data sources:** DVF (property prices), 2nd round results (Ministère de l'Intérieur)
+
+**Stack:** Python + pandas (pipeline), Plotly.js (charts), Leaflet.js (maps), Driver.js (help tours), vanilla JS
 
 **Shipped:**
+
+- 4 interactive tabs: quintile breakdown, abstention box plot by bloc, Price distribution box plot, Paris-Lyon-Marseille choropleth, prix/m² vs abstention scatter plot with year toggle
+- 838 communes analysed, DVF 2024 + 2025
+- Guided tours, full French UI, accessibility attributes
+- Published réutilisation on data.gouv.fr for the Défi 1 challenge
 
 **Key lesson:** Declarative specs upfront beat imperative iteration. Full build log coming in blog series.
 
@@ -39,9 +51,9 @@ French municipal elections data viz. Live at [shahfazal.com/elections-municipale
 
 ## Recent Contributions
 
-### [datagouv/datagouv-mcp#100](https://github.com/datagouv/datagouv-mcp/pull/100)
+### [datagouv/datagouv-mcp#100](https://github.com/datagouv/datagouv-mcp/pull/100) (merged)
 
-PR in review for reducing dev friction when testing the official French data.gouv.fr MCP server. Reduced setup from 3-curl handshake to single command.
+Reduced dev friction when testing the official French data.gouv.fr MCP server. Added a `/health` endpoint that runs a full MCP handshake plus tool call, and a `call_tool.py` script that replaces the manual 3-curl handshake with a single command.
 
 **Impact:** Lowers barrier for contributors testing MCP integrations locally.
 
@@ -80,4 +92,4 @@ These aren't production systems - they're foundational exercises to understand b
 
 ---
 
-**Philosophy:** If it can't be measured, it can't be trusted. I apply 20 years of production engineering rigor (observability, regression detection, test harness design) to the chaos of agentic systems.
+**Philosophy:** If it can't be measured, it can't be trusted. I apply 20+ years of production engineering rigor (observability, regression detection, test harness design) to the chaos of agentic systems.
