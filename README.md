@@ -40,7 +40,7 @@ French municipal elections 2026 data viz.
 
 **Shipped:**
 
-- 4 interactive tabs: quintile breakdown, abstention box plot by bloc, Price distribution box plot, Paris-Lyon-Marseille choropleth, prix/m² vs abstention scatter plot with year toggle
+- 5 interactive tabs: quintile breakdown, abstention box plot by bloc, Price distribution box plot, Paris-Lyon-Marseille choropleth, prix/m² vs abstention scatter plot with year toggle
 - 838 communes analysed, DVF 2024 + 2025
 - Guided tours, full French UI, accessibility attributes
 - Published réutilisation on data.gouv.fr for the Défi 1 challenge
@@ -85,7 +85,7 @@ Posts (and ramblings) at **[shahfazal.com/posts](https://shahfazal.com/posts)**:
 
 Before building production eval systems, rebuilt intuition from first principles:
 
-- **[TinyNet](https://github.com/shahfazal/tinynet)** - Neural net from scratch (Python, no frameworks)
+- **[TinyNet](https://github.com/shahfazal/hello-neural-world)** - Neural net from scratch (Python, no frameworks)
 - **[NYC EV LSTM](https://github.com/shahfazal/nyc-ev-lstm)** - Spatio-temporal demand forecasting
 
 These aren't production systems - they're foundational exercises to understand backprop, overfitting, and temporal modeling before applying those concepts to agent evaluation.
