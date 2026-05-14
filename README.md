@@ -10,6 +10,23 @@ Lead SWE @ Salesforce. 20+ years deterministic systems, now building and learnin
 
 ## Active Projects
 
+### [CivicInsight](https://github.com/shahfazal/civicinsight) ![MIT](https://img.shields.io/badge/license-MIT-violet)
+
+ARIA-ready descriptions for civic data visualizations. Submitted to the Kaggle Gemma 4 Good Hackathon (May 2026).
+
+Fine-tuned [Gemma 4 E4B](https://huggingface.co/shahfazal/civicinsight-gemma4-e4b-it) on 61 hand-curated examples, paired with a deterministic verification layer that grounds extracted numbers against source CSV when available. Numbers from the model are treated as claims to be checked, not tokens to be trusted.
+
+**Tech stack:** Unsloth, TRL, PyTorch, Modal, FastAPI, Python
+
+**Shipped:**
+
+- Fine-tuned model published to HuggingFace
+- Deterministic verifier with four states (verified / partial / unverified / structural-issue)
+- Live demo on Modal
+- Two upstream vision DPO fixes contributed to [unslothai/unsloth#5196](https://github.com/unslothai/unsloth/issues/5196) (merged April 29, 2026)
+
+---
+
 ### [Claudio](https://github.com/shahfazal/claudio) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
 Session browser for Claude Code. Five shipped versions:
@@ -57,6 +74,10 @@ Reduced dev friction when testing the official French data.gouv.fr MCP server. A
 
 **Impact:** Lowers barrier for contributors testing MCP integrations locally.
 
+### [unslothai/unsloth#5199](https://github.com/unslothai/unsloth/pull/5199) (merged)
+
+Filed [unslothai/unsloth#5196](https://github.com/unslothai/unsloth/issues/5196) reporting two vision DPO blockers on Gemma 4 (tokenization hang in `dataset.map` + data collator schema mismatch) with reproductions and documented workaround attempts. Fix merged into Unsloth main on April 29, 2026.
+
 ---
 
 ## Writing
@@ -66,17 +87,21 @@ Posts (and ramblings) at **[shahfazal.com/posts](https://shahfazal.com/posts)**:
 - **"Nobody Tests the Steering Wheel"** - Why agent evals need observe-first methodology
 - **"Claude Gatekeep You Yet?"** - why it's important to stop and think before handing the reins to your coding agent.
 - **Declarative Viz series (upcoming)** - Build log from elections-municipales-2026
+- **CivicInsight retrospective (upcoming)** - 5 weeks, 19 sessions, what shipped and what got dropped
 
 ---
 
 ## What I'm Working On
 
-**Next up:** Public agent eval demo using `datagouv-mcp` as the skill under test. Goal: show how to treat LLM skills like code (version, test, regression-detect).
+**Next up:** Decompressing from CivicInsight. Picking up backlog projects.
 
 **Backlog:**
 
+- ADS-B + Gemma 4 voice assistant on Raspberry Pi (family collaborative project)
+- TinyDiffusion (3-phase learning project: 1D scalar diffusion → 2x2 unconditional → 2x2 conditional)
+- CodeHaiku (fine-tune Gemma 4 to write PR review comments as haiku)
+- Public agent eval demo using datagouv-mcp
 - AI workflow optimizer (analyzes Claudio session exports for inefficiency patterns)
-- Supply chain security scanner for AI-suggested dependencies
 - Plotly a11y toolkit
 
 ---
