@@ -68,6 +68,12 @@ French municipal elections 2026 data viz.
 
 ## Recent Contributions
 
+### [datagouv/datagouv-mcp#115](https://github.com/datagouv/datagouv-mcp/pull/115) (merged)
+
+Fixed `search_datasets` reporting `resources_count: 4` for every dataset. The v2 search API returns `resources` as a HATEOAS link dict, so the client was counting its 4 keys instead of reading `resources.total`. Found while using the MCP, isolated against the live API, locked with a regression unit test, and verified end-to-end through the local MCP loop (using the `call_tool.py` I shipped in #100).
+
+**Impact:** Consuming models now see true per-dataset resource counts instead of a constant 4.
+
 ### [datagouv/datagouv-mcp#100](https://github.com/datagouv/datagouv-mcp/pull/100) (merged)
 
 Reduced dev friction when testing the official French data.gouv.fr MCP server. Added a `/health` endpoint that runs a full MCP handshake plus tool call, and a `call_tool.py` script that replaces the manual 3-curl handshake with a single command.
