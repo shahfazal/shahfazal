@@ -1,4 +1,4 @@
-### Bonjour, I'm Faz! 👋
+### Bonjour, I'm Fazal! 👋
 
 **Software Engineer | French Dev in NYC 🗽🇫🇷**
 
