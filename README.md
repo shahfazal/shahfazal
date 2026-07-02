@@ -10,6 +10,23 @@ Lead SWE @ Salesforce. 20+ years deterministic systems, now building and learnin
 
 ## Active Projects
 
+### [CodeHaiku](https://github.com/shahfazal/lgtm-575) ![MIT](https://img.shields.io/badge/license-MIT-violet)
+
+Eval-first fine-tuning: a Gemma 4 E4B model that writes PR review comments as 5-7-5 haiku (June 2026).
+
+Built the eval harness before any training, then used the same harness to curate training data and gate a generate-check-revise loop around a Qwen3-30B-A3B teacher. A deterministic syllable checker (pyphen with snake_case decomposition, acronym overrides, low-confidence flags) catches form failures that loss curves cannot see.
+
+**Tech stack:** Unsloth, TRL, PyTorch, pyphen, Python
+
+**Shipped:**
+
+- Fine-tuned model scored against a base-model floor and three golden numbers committed before training (bench-drop discipline)
+- 5-7-5 form did not improve significantly (McNemar p=0.167); relevance and category cleared their pre-set targets
+- Four-part blog series documenting the methodology and the audit of the eval itself
+- [Project page](https://shahfazal.com/projects/codehaiku/) · [Writeup](https://shahfazal.com/posts/the-eval-before-the-model/)
+
+---
+
 ### [CivicInsight](https://github.com/shahfazal/civicinsight) ![MIT](https://img.shields.io/badge/license-MIT-violet)
 
 ARIA-ready descriptions for civic data visualizations. Submitted to the Kaggle Gemma 4 Good Hackathon (May 2026).
@@ -29,18 +46,17 @@ Fine-tuned [Gemma 4 E4B](https://huggingface.co/shahfazal/civicinsight-gemma4-e4
 
 ### [Claudio](https://github.com/shahfazal/claudio) ![MIT](https://img.shields.io/badge/license-MIT-blue)
 
-Session browser for Claude Code. Five shipped versions:
+Session browser and observability tool for Claude Code. Eight shipped versions through v0.8.0:
 
-- **v0.1:** Local session explorer (parses `~/.claude/` directory)
-- **v0.2:** Memory browser (reads project memory states)
-- **v0.3:** Compaction viewer (analyzes context window compression)
+- **v0.1-0.3:** Local session explorer, memory browser, compaction viewer
 - **v0.4:** Resilience — environment health checks, session export endpoint, externalized pricing config
-- **v0.5:** Stats dashboard — D3 heatmap, per-project cost bars, cumulative cost line, date-range filter, graceful degradation on parse failures
+- **v0.5:** Stats dashboard — D3 heatmap, per-project cost bars, cumulative cost line, date-range filter
+- **v0.6-0.7:** Guided help tour across nav surfaces; full session transcript rendering with per-session cost, todos, command history
+- **v0.8:** Durable session store with background sync — mirrors live sessions into a persistent archive that protects history against Claude Code's retention sweeps, plus full-text search across archived transcripts
 
-**Upcoming:** Driver.js guided help tour across the nav surfaces
 **Tech stack:** Python, Flask, Jinja2, D3.js, pytest
 
-**Use case:** Browse session history, review memory evolution, analyze cost and token usage across projects.
+**Use case:** Browse and archive session history, review memory evolution, search transcripts, analyze cost and token usage across projects.
 
 ---
 
@@ -90,22 +106,22 @@ Filed [unslothai/unsloth#5196](https://github.com/unslothai/unsloth/issues/5196)
 
 Posts (and ramblings) at **[shahfazal.com/posts](https://shahfazal.com/posts)**:
 
-- **"Nobody Tests the Steering Wheel"** - Why agent evals need observe-first methodology
-- **"Claude Gatekeep You Yet?"** - why it's important to stop and think before handing the reins to your coding agent.
+- **["PR Reviews in Haiku, and the Eval That Mattered More"](https://shahfazal.com/posts/the-eval-before-the-model/)** (June 2026) - Four-part CodeHaiku writeup on building the eval before the model, and what format-constrained generation reveals that loss curves cannot see.
+- **["Trained in America, Wrong in Paris"](https://shahfazal.com/posts/trained-in-america-wrong-in-paris/)** (May 2026) - Empirical study of LLM pretraining priors on civic data viz; five frontier models, systematic US-bias substitution.
+- **["Engineering for Systems That Lie"](https://shahfazal.com/posts/engineering-for-systems-that-lie/)** (May 2026) - CivicInsight retrospective on fine-tuning, verification, and what 61 examples can and cannot teach a model.
+- **["Nobody Tests the Steering Wheel"](https://shahfazal.com/posts/nobody-tests-the-steering-wheel/)** (2026) - Why agent evals need observe-first methodology.
 - **Declarative Viz series (upcoming)** - Build log from elections-municipales-2026
-- **CivicInsight retrospective (upcoming)** - 5 weeks, 19 sessions, what shipped and what got dropped
 
 ---
 
 ## What I'm Working On
 
-**Next up:** Decompressing from CivicInsight. Picking up backlog projects.
+**Next up:** Decompressing from CodeHaiku. Picking up backlog projects.
 
 **Backlog:**
 
 - ADS-B + Gemma 4 voice assistant on Raspberry Pi (family collaborative project)
 - TinyDiffusion (3-phase learning project: 1D scalar diffusion → 2x2 unconditional → 2x2 conditional)
-- CodeHaiku (fine-tune Gemma 4 to write PR review comments as haiku)
 - Public agent eval demo using datagouv-mcp
 - AI workflow optimizer (analyzes Claudio session exports for inefficiency patterns)
 - Plotly a11y toolkit
@@ -117,7 +133,7 @@ Posts (and ramblings) at **[shahfazal.com/posts](https://shahfazal.com/posts)**:
 Before building production eval systems, rebuilt intuition from first principles:
 
 - **[TinyNet](https://github.com/shahfazal/hello-neural-world)** - Neural net from scratch (Python, no frameworks)
-- **[NYC EV LSTM](https://github.com/shahfazal/nyc-ev-lstm)** - Spatio-temporal demand forecasting
+- **[NYC EV LSTM](https://github.com/shahfazal/nyc-ev-charger-model)** - Spatio-temporal demand forecasting
 
 These aren't production systems - they're foundational exercises to understand backprop, overfitting, and temporal modeling before applying those concepts to agent evaluation.
 
